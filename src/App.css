@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  width: 60%;
+  width: 80%;
   border: 1px solid black;
   margin: auto;
 }
@@ -35,4 +35,27 @@ button {
 }
 button :hover {
   color:darkgray;
+}
+div.song {
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ padding-left: 5%;
+}
+div.logo {
+  text-align: left;
+  padding:10px;
+  padding-left: 10%;
+  font-weight: bolder;
+  font-size: 30px;
+}
+div.header {
+  text-align: right;
+  padding-right: 10%;
+  font-weight: bolder;
+  color: red;
+}
+hr {
+  width: 80%;
+  border-top: 3px solid black;
+  border-radius: 10px;
 }

@@ -6,10 +6,10 @@ const Playlist = (props) => {
     const loaded = () => (
         <div>
           {songs.map((song) => (
-            <div key={song._id}>
-            <h2>{song.title}</h2>
-            <h2>{song.artist}</h2>
-            <h2>{song.duration}</h2>
+            <div className="song" key={song._id}>
+            <h4>{song.title}</h4>
+            <h4>{song.artist}</h4>
+            <h5>{song.duration}</h5>
             </div>
           ))}
         </div>

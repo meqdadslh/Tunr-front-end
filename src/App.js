@@ -50,6 +50,7 @@ fetch(url + "/tunes/" + song._id, {
   return (
     <main>
      <Nav/>
+     <hr/>
      <Playlist
       songs = {songs}/>
      <Form
