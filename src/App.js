@@ -4,7 +4,7 @@ import Playlist from "./component/Playlist"
 import Form from "./component/Form";
 import Nav from "./component/Nav"
 
-function App() {
+function App(props) {
 
 const url = "https://ams-329-tunr.herokuapp.com"
 
@@ -52,7 +52,9 @@ fetch(url + "/tunes/" + song._id, {
      <Nav/>
      <hr/>
      <Playlist
-      songs = {songs}/>
+      songs = {songs}
+      deleteSong={deleteSong}
+      />
      <Form
       song={emptySong}
       handleSubmit={handleCreate}

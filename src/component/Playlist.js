@@ -1,27 +1,33 @@
 import React from "react"
 
+
 const Playlist = (props) => {
-    const {songs} = props
-    
-    const loaded = () => (
-        <div>
-          {songs.map((song) => (
-            <div className="song" key={song._id}>
-            <h4>{song.title}</h4>
-            <h4>{song.artist}</h4>
-            <h5>{song.duration}</h5>
+  const { playlist, songs, deleteSong } = props
+
+  const loading = () => {
+    return <h2>Playlist1</h2>
+  }
+  const loaded = () => {
+    return (
+      <div className="container">
+        <h1>Playlist</h1>
+        <h2>{playlist}</h2>
+        <div className="playlist">
+          {songs.map((song, index) => (
+            <div className="song" key={index}>
+              <div className="song-details">
+                <p>{song.title}</p>
+                <p>{song.artist}</p>
+                <p>{song.duration}</p>
+                <p className="delete-button" onClick={() => deleteSong(song)}>X</p>
+              </div>
             </div>
           ))}
         </div>
-      )
-    
-      const loading = () => <h1>Loading</h1>
-      
-      return (
-        <h1>Totally Awesome Playlist!</h1>, 
-        songs.length > 0 ? loaded() : loading ()
-
-      )
+      </div>
+    )
+  }
+  return songs ? loaded() : loading()
 }
 
 export default Playlist
